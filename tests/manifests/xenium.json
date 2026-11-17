@@ -1,0 +1,110 @@
+{
+ "family": "xenium",
+ "datasets": {
+  "lung": {
+   "root": "Xenium_V1_humanLung_Cancer_FFPE/sim/LuCA",
+   "files": {
+    "hoptimus_tile_embed_HL.pt": {
+     "bytes": 692397153,
+     "policy": "tensor"
+    },
+    "pannuke_fast_mask_lvl3_annotated.json": {
+     "bytes": 100423515,
+     "policy": "json"
+    },
+    "pseudo_adata_real.h5ad": {
+     "bytes": 213992,
+     "sha256": "c0a03b71da5f72b1b460caea3c4f13314a580982d715c6d4670e94c63abe2dd7",
+     "policy": "h5ad"
+    },
+    "sim_Xenium_V1_humanLung_Cancer_FFPE_gt.csv": {
+     "bytes": 3759734,
+     "sha256": "54219b71ffe9d9bac833b4d67c2f427217a01a30aece45ab57b3da86241274d7",
+     "policy": "csv"
+    },
+    "sim_Xenium_V1_humanLung_Cancer_FFPE_prop_real.csv": {
+     "bytes": 127107,
+     "sha256": "1de21cc14f2a5426eb4908a53b405fd179700f75ad297b0b91f27a2a33104de1",
+     "policy": "csv"
+    },
+    "spot_dict_real.json": {
+     "bytes": 340486,
+     "sha256": "3625106454cb70e35455ff4b7d8455b057abfa787e10c6ddf85eca525d5ade8a",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "cosine_annotation.h5ad": "the label-transfer output; shipped as a CSV in annotations/xenium/ instead",
+    "image_dict_64.pt": "cell crops, only MoCo consumed them",
+    "lemon_embeddings.pt": "another feature variant, not read by the gridsearch",
+    "moco_embed_HL_48px_12um.pt": "MoCo-v3 embeddings",
+    "moco_embed_HL_64px_16um.pt": "MoCo-v3 embeddings",
+    "moco_embed_HL_64px_20um.pt": "MoCo-v3 embeddings",
+    "moco_embed_moco-XENHL-rn50.pt": "MoCo-v3 embeddings",
+    "pseudo_adata_grouped.h5ad": "the spot_orga != 'real' lattice variant",
+    "sim_Xenium_V1_humanLung_Cancer_FFPE_prop_grouped.csv": "the spot_orga != 'real' lattice variant",
+    "sim_Xenium_V1_humanLung_Cancer_FFPE_prop_real_perturb_0.05.csv": "proportion perturbations, built by HEDeST not by this repo",
+    "sim_Xenium_V1_humanLung_Cancer_FFPE_prop_real_perturb_0.1.csv": "proportion perturbations, built by HEDeST not by this repo",
+    "sim_Xenium_V1_humanLung_Cancer_FFPE_prop_real_perturb_0.25.csv": "proportion perturbations, built by HEDeST not by this repo",
+    "sim_Xenium_V1_humanLung_Cancer_FFPE_prop_real_perturb_0.5.csv": "proportion perturbations, built by HEDeST not by this repo",
+    "spot_dict_adjust_grouped.json": "the spot_orga != 'real' lattice variant",
+    "spot_dict_adjust_real.json": "an older PPSA input; hedest/ppsa.py builds the neighbourhood from the spot coordinates itself",
+    "spot_dict_grouped.json": "the spot_orga != 'real' lattice variant"
+   },
+   "undeclared": []
+  },
+  "breast": {
+   "root": "Xenium_FFPE_Human_Breast_Cancer_Rep1/sim",
+   "files": {
+    "hoptimus_tile_embed_HB.pt": {
+     "bytes": 775639954,
+     "policy": "tensor"
+    },
+    "pannuke_fast_mask_lvl3_annotated.json": {
+     "bytes": 109853881,
+     "policy": "json"
+    },
+    "pseudo_adata_real.h5ad": {
+     "bytes": 280072,
+     "sha256": "26f22806cf088796eb9292832fc23c6c4fe96f5a76c242a1821a18600b5988d0",
+     "policy": "h5ad"
+    },
+    "sim_Xenium_FFPE_Human_Breast_Cancer_Rep1_gt.csv": {
+     "bytes": 2462210,
+     "sha256": "8dca28a4fdbf86eab78664fd5392e79c3d7ef44ca2c5d70dbf041a84e789bd8a",
+     "policy": "csv"
+    },
+    "sim_Xenium_FFPE_Human_Breast_Cancer_Rep1_prop_real.csv": {
+     "bytes": 179885,
+     "sha256": "910c5db0453d0a0997e703d18a438e46622ecf9144b0c3cc5f986d7c52816352",
+     "policy": "csv"
+    },
+    "spot_dict_real.json": {
+     "bytes": 452464,
+     "sha256": "018c9a039185e440e99e9e4619b9c05698c2bc0a321a55d7e4556229b4de772f",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "image_dict_64.pt": "cell crops, only MoCo consumed them",
+    "lemon_embeddings.pt": "another feature variant, not read by the gridsearch",
+    "moco_embed_HB_48px_12um.pt": "MoCo-v3 embeddings",
+    "moco_embed_HB_64px_16um.pt": "MoCo-v3 embeddings",
+    "moco_embed_HB_64px_20um.pt": "MoCo-v3 embeddings",
+    "moco_embed_moco-XENHBrep1-rn50.pt": "MoCo-v3 embeddings",
+    "pseudo_adata_small.h5ad": "a reduced test variant",
+    "sim_Xenium_FFPE_Human_Breast_Cancer_Rep1_prop_real_perturb_0.05.csv": "proportion perturbations, built by HEDeST not by this repo",
+    "sim_Xenium_FFPE_Human_Breast_Cancer_Rep1_prop_real_perturb_0.1.csv": "proportion perturbations, built by HEDeST not by this repo",
+    "sim_Xenium_FFPE_Human_Breast_Cancer_Rep1_prop_real_perturb_0.25.csv": "proportion perturbations, built by HEDeST not by this repo",
+    "sim_Xenium_FFPE_Human_Breast_Cancer_Rep1_prop_real_perturb_0.5.csv": "proportion perturbations, built by HEDeST not by this repo",
+    "sim_Xenium_FFPE_Human_Breast_Cancer_Rep1_prop_small.csv": "a reduced test variant",
+    "spot_dict_adjust_real.json": "an older PPSA input; hedest/ppsa.py builds the neighbourhood from the spot coordinates itself",
+    "spot_dict_adjust_small.json": "a reduced test variant",
+    "spot_dict_small.json": "a reduced test variant"
+   },
+   "undeclared": []
+  }
+ }
+}

@@ -1,0 +1,35 @@
+# The Visium HD `bin2cell` stage only.
+#
+#   CONDA_SOLVER=libmamba conda env create -f envs/bin2cell.yml
+#   python make_simdata.py DATA --bin2cell-python <this env>/bin/python
+#
+# Separate from the core environment because StarDist needs TensorFlow, which pins numpy
+# and protobuf against what the rest of the stack wants. bin2cell can segment with either
+# StarDist or HoVerNet; this repository uses HoVerNet (it is what the published datasets
+# were built with), but StarDist is kept installable because bin2cell's own helpers import
+# it eagerly.
+name: hedest-simdata-bin2cell
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=1.26
+  - pandas=2.2
+  - scipy
+  - anndata=0.10
+  - scanpy=1.10
+  - zarr=2.18
+  - scikit-image
+  - tifffile
+  - openslide
+  - openslide-python
+  - matplotlib-base
+  - pip
+  - pip:
+      - bin2cell
+      - opencv-python==4.11.0.86
+      - csbdeep==0.8.2
+      - stardist==0.9.2
+      # TF 2.15 is the last release StardDist 0.9 works against on this numpy pin
+      - tensorflow==2.15.0
+      - scikit-misc

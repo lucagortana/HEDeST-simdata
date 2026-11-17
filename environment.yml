@@ -1,0 +1,152 @@
+# The core environment: everything except the three stages that need their own.
+#
+#   CONDA_SOLVER=libmamba conda env create -f environment.yml   # env "hedest-simdata"
+#   conda activate hedest-simdata
+#
+# Use the libmamba solver. On this spec the classic solver does not converge in any
+# reasonable time; conda >= 23.10 uses libmamba by default, so plain
+# `conda env create -f environment.yml` is already fine there. Below that, pass the solver
+# explicitly as above -- and check it is installed (`conda list -n base conda-libmamba-solver`),
+# because an unknown CONDA_SOLVER value is not an error, it silently falls back to classic.
+#
+# `nodefaults` is not decoration. `conda env create` appends whatever channels the user's
+# ~/.condarc declares, so on a machine whose condarc lists `defaults` (as the one this was
+# built on does) the same file would otherwise solve against a different channel set and
+# produce a different environment. Everything here is on conda-forge.
+#
+# The GPU stages need a CUDA build of pytorch, and this file deliberately does not pin one:
+# a CUDA build requires conda's `__cuda` virtual package, which is absent on a login node
+# without a GPU, so pinning it here would make the environment impossible to create exactly
+# where people create it. Install it afterwards instead -- see the README section 3.
+#
+# Three stages do NOT run in here, because their dependencies cannot coexist with these:
+#
+#   visiumhd:bin2cell   StarDist + TensorFlow         envs/bin2cell.yml
+#   *:hovernet          HoVerNet's own env            HEDeST ships it (requirements-hovernet.txt)
+#   sthelar:cellvit     CellViT's own env             HEDeST ships it
+#
+# Point the driver at them with --bin2cell-python / --hovernet-python / --cellvit-python,
+# or the matching environment variables. See the README.
+name: hedest-simdata
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  # --- core scientific stack ---
+  # numpy is held at 1.x: the pinned scanpy / anndata / geopandas builds target it.
+  - numpy=1.26
+  - pandas=2.2
+  - scipy=1.14
+  # --- single-cell / spatial ---
+  - anndata=0.10
+  - scanpy=1.10
+  # Imported directly, by four stages, to read and write the .h5ad files by hand where
+  # anndata's own reader would load more than is needed. It was undeclared until
+  # tests/test_env_spec.py compared this file against what the stages import: it worked
+  # only because anndata happens to depend on it, which is luck, not a specification.
+  - h5py
+  # zarr is held at 2.x: the STHELAR archives are read through zarr's v2 ZipStore API,
+  # which changed incompatibly in zarr 3.
+  - zarr=2.18
+  # spatialdata is deliberately NOT a conda dependency here; it is pinned in the pip
+  # section at the end of this file, which explains why.
+  # --- imaging ---
+  - scikit-image=0.24
+  - tifffile>=2024.8,<2025
+  - pillow=11.0
+  - openslide=4.0
+  - openslide-python
+  - opencv=4.10
+  # --- geometry ---
+  - geopandas=1.0
+  - shapely=2.0
+  # --- plotting (the bench_data and Visium HD figures) ---
+  - matplotlib-base=3.9
+  # --- H-Optimus-0 ---
+  # Resolves to a CPU build on a machine with no GPU, which is where environments get
+  # created. The embedding stages would then run on the CPU and take many hours, so swap in
+  # a CUDA build afterwards -- README section 3 gives the exact command, and the version
+  # there is the one this repo was validated with.
+  - pytorch=2.4
+  - timm
+  - loguru
+  # hedest/features/hoptimus.py imports typer at module level (it doubles as a
+  # CLI there), so importing the extractor needs it even though this repo never
+  # uses the CLI. Without it the embedding stages fail at import, after the
+  # pipeline has already spent hours getting to them.
+  - typer
+  - huggingface_hub
+  # --- reading the vendor spreadsheet (Xenium breast annotation) ---
+  - openpyxl
+  - tqdm
+  # xarray-schema 0.0.3 (reached through spatialdata) imports pkg_resources, which lives in
+  # setuptools and is not in a conda env by default. <81 because setuptools 81 removes it.
+  - setuptools<81
+  - pip
+  - pip:
+      # The Xenium family reads the vendor output bundle through spatialdata-io's `xenium`
+      # reader, and both halves are pinned to what built the delivered datasets: the
+      # `xenium-env` environment they were made in had spatialdata 0.2.3 and
+      # spatialdata-io 0.1.5. Left unpinned the solve takes 0.4+/0.7, whose `xenium()`
+      # writes a differently shaped SpatialData archive -- and `xenium:spots` reads that
+      # archive, so every Xenium deliverable would move with it. Nothing caught this for a
+      # long time because every validation reused an already-converted archive rather than
+      # running `xenium:convert`.
+      #
+      # Both are here rather than in the conda list for two separate reasons:
+      #
+      #   spatialdata-io 0.1.5 has to be: conda-forge's spatialdata-io starts at 0.2.0.
+      #
+      #   spatialdata 0.2.3 *can* be installed by conda, but asking libsolv 0.7.24 (what
+      #   conda 23.7 / conda-libmamba-solver 23.7 ship) for it alongside these pins makes
+      #   the solver run for 69 minutes and then abort with an internal assertion,
+      #   `solver_addrule: Assertion '!p2 && d > 0' failed` -- measured 2026-11-08. Its
+      #   dependency chain reaches xarray-datatree, since folded into xarray, so an old
+      #   pin drags the solver through a large space of retired combinations. pip resolves
+      #   the same subgraph in seconds, and all of it is pure Python, so nothing compiled
+      #   is rebuilt or shadowed: the conda-provided numpy, geopandas, anndata and zarr
+      #   above already satisfy what spatialdata 0.2.3 asks for and pip leaves them alone.
+      # This is a lock, not a wish list: every version below is what `xenium-env` had, and
+      # the set was verified by importing all 23 packages the stages use. Resolving it
+      # loosely does not work, and each of these four failures was reached in turn on
+      # 2026-11-08 before the list settled:
+      #
+      #   xarray 2024.7.0            -- with 2025.x, `import spatialdata` dies in
+      #                                 xarray-datatree with "The legacy implementation is
+      #                                 no longer supported".
+      #   xarray-dataclasses 1.8.0   -- a dependency of spatial-image. Unpinned, pip takes
+      #                                 3.0.0, which requires numpy>=2 and silently drags
+      #                                 numpy to 2.2 past the `numpy=1.26` conda pin above.
+      #   dask[dataframe] 2024.8.0   -- the extra is required: without it spatialdata's
+      #                                 import fails in dask.dataframe. dask-expr comes with
+      #                                 it and is fine, because spatialdata turns query
+      #                                 planning off itself -- but only if nothing has
+      #                                 imported dask.dataframe first, so a stage must
+      #                                 import spatialdata before anything that pulls dask.
+      #   setuptools (conda, <81)    -- xarray-schema 0.0.3 imports pkg_resources.
+      #   fsspec 2023.6.0            -- spatialdata 0.2.3 requires fsspec<=2023.6. Pinned
+      #                                 here because the CUDA-torch step in README section 3
+      #                                 can otherwise replace it: torch depends on fsspec
+      #                                 unpinned, so a `--force-reinstall` of torch takes the
+      #                                 newest one and breaks spatialdata. The README gives
+      #                                 the install that does not do that.
+      - numpy==1.26.4
+      - fsspec==2023.6.0
+      - spatialdata==0.2.3
+      - spatialdata-io==0.1.5
+      - xarray==2024.7.0
+      - xarray-datatree==0.0.14
+      - xarray-schema==0.0.3
+      - xarray-spatial==0.4.0
+      - xarray-dataclasses==1.8.0
+      - dask[dataframe]==2024.8.0
+      - dask-expr==1.1.10
+      - distributed==2024.8.0
+      - dask-image==2024.5.3
+      - pyarrow==17.0.0
+      - numba==0.60.0
+      - datashader==0.16.3
+      - ome-zarr==0.9.0
+      - multiscale-spatial-image==1.0.1
+      - spatial-image==1.1.0

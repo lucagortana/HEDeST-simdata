@@ -1,0 +1,488 @@
+{
+ "family": "visiumhd",
+ "datasets": {
+  "P1": {
+   "root": "Visium_HD_Human_Colon_Cancer_P1/pseudovisium",
+   "files": {
+    "hoptimus_tile_embed.pt": {
+     "bytes": 1389412374,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 138018790,
+     "policy": "json"
+    },
+    "metadata.json": {
+     "bytes": 17735,
+     "sha256": "305db3e376654c05afafbb1411bea073a5056fd53a9c87e3984fb50f0591a212",
+     "policy": "json"
+    },
+    "plots/00_levels_tree.png": {
+     "bytes": 148576,
+     "sha256": "1d9e95a81027258b85c36882024a337f2613e938e636c5f2c5cdacca351f6cc7",
+     "policy": "figure"
+    },
+    "plots/01_overview_hovernet.png": {
+     "bytes": 7778499,
+     "sha256": "9cf7db069c3e841028e070e78c65805bc074e320774002df1209eb66c18d6bf6",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv0.png": {
+     "bytes": 7834075,
+     "sha256": "e7fa9f0b7440b0ed99d049335cce3770bb99337512521d851c410787c1905ee6",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv1.png": {
+     "bytes": 7755586,
+     "sha256": "7787875dccc650a967951c0eb90f9477f89e906727e2cb376113be156e13f8d2",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv2.png": {
+     "bytes": 7771278,
+     "sha256": "9675af776d9dee737a425a79f007caf0ac53f4fee97b4433d490f28de28b6644",
+     "policy": "figure"
+    },
+    "plots/02_window_hovernet.png": {
+     "bytes": 3589982,
+     "sha256": "905aaa74ef939fc57bc9003403c49c899324cc30c3412f112545be47982e1135",
+     "policy": "figure"
+    },
+    "plots/02_window_lv0.png": {
+     "bytes": 3472051,
+     "sha256": "66e843fae2d4ce6aaf17e941c5811256c2762f942187db6e99c106bae9e5221f",
+     "policy": "figure"
+    },
+    "plots/02_window_lv1.png": {
+     "bytes": 3473770,
+     "sha256": "f1968c6599a4980f6e0aea88cf64f8aed5941164b055f7b09e30322688554536",
+     "policy": "figure"
+    },
+    "plots/02_window_lv2.png": {
+     "bytes": 3484645,
+     "sha256": "20d11eb4e5fbd40620485f907fab66a851af9616754b8814db2430e1eee674a6",
+     "policy": "figure"
+    },
+    "plots/03_props_lv0.png": {
+     "bytes": 2240759,
+     "sha256": "69e1d413e46072bcaf0a03b2d5b6e2eb5ba44e500fd3be3f0b70f35bec108b4b",
+     "policy": "figure"
+    },
+    "plots/03_props_lv1.png": {
+     "bytes": 2289181,
+     "sha256": "a2324b9221cf05c6cff827314f4661218604871044b2a5c2f6d8b48d2f25d65f",
+     "policy": "figure"
+    },
+    "plots/03_props_lv2.png": {
+     "bytes": 2337716,
+     "sha256": "ed59f087c78b149e18262fe9a536d4b1f59e449b2404e96b3b51dff6b57794c7",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv0.png": {
+     "bytes": 4864979,
+     "sha256": "eb7df59df8f13471785f6593aa6764f3dda529133d24dbdf94e554db4b57bdaa",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv1.png": {
+     "bytes": 4858602,
+     "sha256": "e8f1f15fe80975304067bea3d808c7767dfd69c8aa226698a43a56142394c1c7",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv2.png": {
+     "bytes": 4869331,
+     "sha256": "acb657561a65c99e86111013e9a7ecf94e960f67eb8263ef8dcff7091810b22d",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv0.png": {
+     "bytes": 460626,
+     "sha256": "004cc8314e1abd1fb400944f8eb124f148ab2c91faf352f1430596f89efdea9a",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv1.png": {
+     "bytes": 904864,
+     "sha256": "daa665e170fe04b81926de4b3c61dc5e4c932a77dbe47c3b5d649e33cd38efe9",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv2.png": {
+     "bytes": 1792887,
+     "sha256": "8652faf8e863f0870ae320b6b612210e6730a82e84660d791c1d6c28596708c8",
+     "policy": "figure"
+    },
+    "plots/06_spot_qc.png": {
+     "bytes": 2091845,
+     "sha256": "43866cdc69e512bfe05edbc9ea64fd58a9ea1386ef7d2d89704cb0ad524574b1",
+     "policy": "figure"
+    },
+    "plots/07_matching.png": {
+     "bytes": 264370,
+     "sha256": "3fe00aeb73cbbd3b3242e7d501e20191a9ab2fdac97631b614a984759e09fd8e",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 182371783,
+     "policy": "h5ad"
+    },
+    "sim/cell_types.csv": {
+     "bytes": 23479160,
+     "sha256": "68f83ef57fe2fdf0feb28c6a3e75766c2732f46adeaf6f8110591961d9c7515b",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 2098,
+     "sha256": "314bda8d5496698f6a861d5b0b3a5e842817f34fcfa3546b01c2fa379247436a",
+     "policy": "json"
+    },
+    "sim/proportions_lv0.csv": {
+     "bytes": 131978,
+     "sha256": "7d8fea3a9303ddbf09d1275bcf39e42ee9651a28819873cf0fba6c53ef3747df",
+     "policy": "csv"
+    },
+    "sim/proportions_lv1.csv": {
+     "bytes": 207174,
+     "sha256": "4077ed93654c9a8b55a8294479f801eb99d303bd021369c96435982cc94a720c",
+     "policy": "csv"
+    },
+    "sim/proportions_lv2.csv": {
+     "bytes": 307194,
+     "sha256": "be92cdf17e93aa01134fd00d46ff5225601fadb41cc82c8b9eb76c5526a5f725",
+     "policy": "csv"
+    },
+    "spot_dict.json": {
+     "bytes": 626842,
+     "sha256": "0e751012d2da50167c57edb097923e19fd052e07ccf25c5b48d9c48009b408a5",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "README.md": "no READMEs inside the simulated-data folders"
+   },
+   "undeclared": [],
+   "pyr_tif": {
+    "bytes": 1741380897,
+    "policy": "tiff"
+   }
+  },
+  "P2": {
+   "root": "Visium_HD_Human_Colon_Cancer_P2/pseudovisium",
+   "files": {
+    "hoptimus_tile_embed.pt": {
+     "bytes": 1820140150,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 180770146,
+     "policy": "json"
+    },
+    "metadata.json": {
+     "bytes": 15739,
+     "sha256": "1a054cbf5208a7fb64450f829179769934999306e41bec9189c297a65b8a734d",
+     "policy": "json"
+    },
+    "plots/00_levels_tree.png": {
+     "bytes": 145800,
+     "sha256": "be11255ae5428b7373ee3d6b9688873e65ad9c82055b0880d13ef337d6a8a0f4",
+     "policy": "figure"
+    },
+    "plots/01_overview_hovernet.png": {
+     "bytes": 7913942,
+     "sha256": "87a41a3e1f60c4b0b4e18e1f65cf9255b4b80c1c8eef7bbd3702df56926676ed",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv0.png": {
+     "bytes": 7945798,
+     "sha256": "ed8164647f50cd244e1a8dcc71d9c264d538b84bb64cac7ac4e69d678fab3e36",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv1.png": {
+     "bytes": 7838324,
+     "sha256": "0ab1f0ec4921050dbf508e2ddb4aab25d00b05a8bb11fc75fbc12f91f9d4f592",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv2.png": {
+     "bytes": 7877335,
+     "sha256": "1d82f3e15c0deb15da1532f409a607d807cdb29d4c8dc2c8378ca29c48948fa8",
+     "policy": "figure"
+    },
+    "plots/02_window_hovernet.png": {
+     "bytes": 3255417,
+     "sha256": "865d593aa704a1100be8d4284f0ea1efca477f6cb0a3693e67e053ca1c68f061",
+     "policy": "figure"
+    },
+    "plots/02_window_lv0.png": {
+     "bytes": 3125540,
+     "sha256": "cc1a128a784cb34ea9ad96bce748c08656772d37de20736307d5e969bb244ea2",
+     "policy": "figure"
+    },
+    "plots/02_window_lv1.png": {
+     "bytes": 3127810,
+     "sha256": "abb6c7364ab9cb7b953c0ebd3747d6e8b7d583810ae2638c2ddf120bdcf6ee9e",
+     "policy": "figure"
+    },
+    "plots/02_window_lv2.png": {
+     "bytes": 3149163,
+     "sha256": "2204b1f565fb8c0b2d5cee46293a2ac742f7c78321433a5dc097879cd05eef4a",
+     "policy": "figure"
+    },
+    "plots/03_props_lv0.png": {
+     "bytes": 1869891,
+     "sha256": "ebe3c269a66391b7518fd3e7da82c2cb3b97af7119b0de69e3a535df3d41cfc5",
+     "policy": "figure"
+    },
+    "plots/03_props_lv1.png": {
+     "bytes": 1897865,
+     "sha256": "26f63d975a54c720625c9451b112ecd70142ba82a4ba1f60c0a29e1ff14152d3",
+     "policy": "figure"
+    },
+    "plots/03_props_lv2.png": {
+     "bytes": 1937137,
+     "sha256": "01013cb473e4c34a06cc4f463ad8aa38eec2309d34eb699de35f7268601d0abc",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv0.png": {
+     "bytes": 4564226,
+     "sha256": "c304d1f8fd77ddd59da0db93708d73a6fe27babfbbd15b5975abe12f9715f0aa",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv1.png": {
+     "bytes": 4547315,
+     "sha256": "f4ade5fe2c0b6fc82a4edb73f3c3413f32a1d6fd1db826b87421d3e34a5923f2",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv2.png": {
+     "bytes": 4574812,
+     "sha256": "9ad984285e0aa44db7dfd8c26d09153d9311b2c30c7914446333a909b1409abe",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv0.png": {
+     "bytes": 407319,
+     "sha256": "c94e156aa5a5235a8b09681d9397e2ac299e70d195ab15714d035c284171f248",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv1.png": {
+     "bytes": 833629,
+     "sha256": "14f25d30b7ddff5ad964ca14f8784ed2a8418e35f4e2478476947901a83dc631",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv2.png": {
+     "bytes": 1373470,
+     "sha256": "c927ec0de651329f9b4e33071efb461c8f5ba604c61cc435a5999d03538716cd",
+     "policy": "figure"
+    },
+    "plots/06_spot_qc.png": {
+     "bytes": 2391454,
+     "sha256": "f50411bf7018f21e977b7dca33874d461ee6e9e15b386d305f69b31c9827a9c1",
+     "policy": "figure"
+    },
+    "plots/07_matching.png": {
+     "bytes": 267987,
+     "sha256": "7a2d812360a3d7c03a773780a97984e28653ce651d20d5b150eb68dd0e5f047f",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 260408793,
+     "policy": "h5ad"
+    },
+    "sim/cell_types.csv": {
+     "bytes": 32324413,
+     "sha256": "6321a6e9c662539dca56fac7f694c4f6076e2fb204e8592a8b0134ada3c7a5f2",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1964,
+     "sha256": "22c747fa30cd46cbb0b94f21eca9fc5af2615b52875bb9c36df9049198eb062d",
+     "policy": "json"
+    },
+    "sim/proportions_lv0.csv": {
+     "bytes": 139485,
+     "sha256": "359352e0cc070fa4072a41b5cfe6cddb585ff29db1de195e5799e50d0f7874c8",
+     "policy": "csv"
+    },
+    "sim/proportions_lv1.csv": {
+     "bytes": 198899,
+     "sha256": "6aeffe3a2d5ae45d76b646cbe11d465eb1196081d70bda73326414316b6c9501",
+     "policy": "csv"
+    },
+    "sim/proportions_lv2.csv": {
+     "bytes": 277782,
+     "sha256": "1b61d87dad0696616f4c26f67560f07fcb10dc27df9f96b685f598425679e699",
+     "policy": "csv"
+    },
+    "spot_dict.json": {
+     "bytes": 804045,
+     "sha256": "bb04a1a1224616d75686462ea4f7f8abc8fab0be0080a24d778cae3c7ba0ca8f",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "README.md": "no READMEs inside the simulated-data folders"
+   },
+   "undeclared": [],
+   "pyr_tif": {
+    "bytes": 1694128321,
+    "policy": "tiff"
+   }
+  },
+  "P5": {
+   "root": "Visium_HD_Human_Colon_Cancer_P5/pseudovisium",
+   "files": {
+    "hoptimus_tile_embed.pt": {
+     "bytes": 1150755750,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 110902561,
+     "policy": "json"
+    },
+    "metadata.json": {
+     "bytes": 15559,
+     "sha256": "2fb4a8d025615c6f2bc968054fb46922e51c7e0152086a2fd54b8b5ce9d820ab",
+     "policy": "json"
+    },
+    "plots/00_levels_tree.png": {
+     "bytes": 149462,
+     "sha256": "081e53fa3b77d7c1890b2c452b80065330c69d49c829091b1ddc61aca1905219",
+     "policy": "figure"
+    },
+    "plots/01_overview_hovernet.png": {
+     "bytes": 7708052,
+     "sha256": "e641922d4097a4c208a868e2be3e1480122f225b3fa39dec8a3862e6869af4d6",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv0.png": {
+     "bytes": 7776752,
+     "sha256": "18bd26706bda23cae1367fd3b281acc4431823256e57fefaa5a6848776c13018",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv1.png": {
+     "bytes": 7679354,
+     "sha256": "fcb107a27b49712911817534d02e88618c3042cfbdce33bff0ac5232a5018c25",
+     "policy": "figure"
+    },
+    "plots/01_overview_lv2.png": {
+     "bytes": 7703282,
+     "sha256": "1d4625e6d555eddfc02e2d3a7818a3c334011dfb840f8e160389425b2d1fb630",
+     "policy": "figure"
+    },
+    "plots/02_window_hovernet.png": {
+     "bytes": 3348603,
+     "sha256": "b81d47e3529a4329bd545a5060a7730ab46736408e8c52083f1973ba8ca0f9ca",
+     "policy": "figure"
+    },
+    "plots/02_window_lv0.png": {
+     "bytes": 3228609,
+     "sha256": "15cae3cf39067afe98d262b12eb1463de700033d73c066ed797689189e859167",
+     "policy": "figure"
+    },
+    "plots/02_window_lv1.png": {
+     "bytes": 3242714,
+     "sha256": "3a6293d084050ae2ef7e0bcc50a7ec3d4d2d2b76db3d3c7b89c50804f5bbf6b0",
+     "policy": "figure"
+    },
+    "plots/02_window_lv2.png": {
+     "bytes": 3253869,
+     "sha256": "7d121ff725be432dcd521afa1d9592e03565ec458e5353865fd250102942b43b",
+     "policy": "figure"
+    },
+    "plots/03_props_lv0.png": {
+     "bytes": 2124812,
+     "sha256": "d44a17feed75416896667268d985546410563a90351ac4a995ef9272d90ca50e",
+     "policy": "figure"
+    },
+    "plots/03_props_lv1.png": {
+     "bytes": 2148349,
+     "sha256": "355c933a3112919ec5077c73cd815d13b7f1890c71cae6f8b64d0d8b073042c4",
+     "policy": "figure"
+    },
+    "plots/03_props_lv2.png": {
+     "bytes": 2167204,
+     "sha256": "3d47327135feb5ac26f6c8afecd89f30de01ced7ff78362d79f7e4afa9e1a680",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv0.png": {
+     "bytes": 4926514,
+     "sha256": "0de77b8cf70ebca097d8a576520feda436b597aabc37ca26dff0356bb2547dee",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv1.png": {
+     "bytes": 4912341,
+     "sha256": "bc27bad814dbd66428946817c56bba8cd03dc74184f08d792dcb40d4a601cf2f",
+     "policy": "figure"
+    },
+    "plots/04_dominant_lv2.png": {
+     "bytes": 4940565,
+     "sha256": "068b8cf559ace357645545acc62058a6dc2fe5dd7d844cd39f882b45522e83f6",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv0.png": {
+     "bytes": 438600,
+     "sha256": "c5312edc92c3eb002c9cac51cb20865a6985ac3d0795fd8cfc3f7afc7144406f",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv1.png": {
+     "bytes": 1008449,
+     "sha256": "ca1121f7f85a7f7c1cbdc22657e558a12593ae49e551893e62c448a7b8811347",
+     "policy": "figure"
+    },
+    "plots/05_gallery_lv2.png": {
+     "bytes": 1587482,
+     "sha256": "cc6d3acd1c8ae5b703e86de1de94c8daaf43c943d9a7c3d3cb0a049609b9cb63",
+     "policy": "figure"
+    },
+    "plots/06_spot_qc.png": {
+     "bytes": 2155575,
+     "sha256": "ed1ec60aca891d02eb35f4d7bf692bb186aec7b512fd54d2ef898474cd4b8194",
+     "policy": "figure"
+    },
+    "plots/07_matching.png": {
+     "bytes": 254381,
+     "sha256": "421de0fdc470efc50f59f9a2bb68305db7c9f92fce534bcf05a24c4f6b6010f2",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 228574297,
+     "policy": "h5ad"
+    },
+    "sim/cell_types.csv": {
+     "bytes": 19463238,
+     "sha256": "33b8fc006881978b164423e357a8c07185c040d0b95606ff382f534395541239",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 2012,
+     "sha256": "552ca236c566d298cb8743b9db536b045d21b908a13066fef7f86661728bbd48",
+     "policy": "json"
+    },
+    "sim/proportions_lv0.csv": {
+     "bytes": 138222,
+     "sha256": "8aec5a2ac16c30dace0bdd53a3aeae533ccbe6acca15a8040a11df73f9f61b4e",
+     "policy": "csv"
+    },
+    "sim/proportions_lv1.csv": {
+     "bytes": 220860,
+     "sha256": "f89086ed7077777701c13c33dcbd021028282fd70fbf62083868b294dae3e346",
+     "policy": "csv"
+    },
+    "sim/proportions_lv2.csv": {
+     "bytes": 286583,
+     "sha256": "11346b9882920eab327f6cac0cd6c1c3e971b257d0ede12d8608a4f9addcb174",
+     "policy": "csv"
+    },
+    "spot_dict.json": {
+     "bytes": 521815,
+     "sha256": "e82794e2250c692853f309a7810e5818fe5c63dbe40e5efae2fb6aab666bb41c",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "README.md": "no READMEs inside the simulated-data folders"
+   },
+   "undeclared": [],
+   "pyr_tif": {
+    "bytes": 1688347033,
+    "policy": "tiff"
+   }
+  }
+ }
+}

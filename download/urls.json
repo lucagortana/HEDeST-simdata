@@ -1,0 +1,181 @@
+{
+  "_comment": [
+    "Where the raw data comes from. One entry per file the pipeline needs.",
+    "",
+    "STHELAR is on EBI BioStudies, an open FTP, so its URLs are here and the download",
+    "stage just works. The 10x Genomics datasets are different: their files are served",
+    "behind a form that asks for an email and acceptance of terms, so there is no stable",
+    "URL to hard-code and a scripted download would break or, worse, fetch an HTML error",
+    "page and save it under a .btf name. For those, `url` is null: the download stage",
+    "prints the dataset page and the exact files it needs, and you either fill the URLs in",
+    "here once you have them or drop the files in place yourself.",
+    "",
+    "`bytes` is checked after a download when present, because resume turns a truncated",
+    "source into a silently short file. The STHELAR sizes were measured from the archive",
+    "on 2026-11-05."
+  ],
+  "sthelar": {
+    "source_page": "https://www.ebi.ac.uk/biostudies/studies/S-BIAD2146",
+    "base": "https://ftp.ebi.ac.uk/biostudies/fire/S-BIAD/146/S-BIAD2146/Files/STHELAR",
+    "per_slide": [
+      {
+        "role": "sdata",
+        "url": "{base}/sdata_slides/sdata_{slide}.zarr.zip",
+        "dest": "STHELAR/raw/sdata_{slide}.zarr.zip",
+        "what": "SpatialData archive: H&E pyramid, nucleus boundaries, cell expression"
+      },
+      {
+        "role": "cell_metadata",
+        "url": "{base}/summary_all_labels_per_slide/{slide}_cell_metadata.parquet",
+        "dest": "STHELAR/raw/{slide}_cell_metadata.parquet",
+        "what": "per-cell label table, both taxonomies"
+      }
+    ],
+    "bytes": {
+      "sdata": {
+        "breast_s6": 38795733696,
+        "cervix_s0": 37146783683,
+        "lung_s3": 20234584495,
+        "lymph_node_s0": 26591743921,
+        "ovary_s1": 24363183428,
+        "prostate_s0": 13187364421,
+        "skin_s4": 7886135977
+      },
+      "cell_metadata": {
+        "breast_s6": 14394320,
+        "cervix_s0": 16818960,
+        "lung_s3": 5858569,
+        "lymph_node_s0": 15835014,
+        "ovary_s1": 7108061,
+        "prostate_s0": 3453522,
+        "skin_s4": 2294835
+      }
+    }
+  },
+  "visiumhd": {
+    "source_page": "https://www.10xgenomics.com/platforms/visium/product-family/dataset-human-crc",
+    "base": "https://cf.10xgenomics.com/samples/spatial-exp/3.0.0",
+    "note": "Three patients, P1 P2 P5. Every URL below was verified with a HEAD request (200, and the Content-Length recorded in `bytes`); P1's tissue image also matched a local copy byte for byte. The dataset page offers the same files behind a form if the CDN layout ever changes. `bytes` is keyed by patient (P1/P2/P5) while {sample} is the full folder name, so sources.visiumhd() takes both.",
+    "bytes": {
+      "tissue_image": {
+        "P1": 12571438598,
+        "P2": 11098424743,
+        "P5": 14170291562
+      },
+      "binned_outputs": {
+        "P1": 12319027011,
+        "P2": 15886359364,
+        "P5": 16568446864
+      },
+      "spatial": {
+        "P1": 77228875,
+        "P2": 62214176,
+        "P5": 77510154
+      },
+      "feature_slice": {
+        "P1": 511604275,
+        "P2": 788081375,
+        "P5": 703840912
+      }
+    },
+    "per_sample": [
+      {
+        "role": "tissue_image",
+        "url": "{base}/{sample}/{sample}_tissue_image.btf",
+        "dest": "{sample}/{sample}_tissue_image.btf",
+        "what": "full-resolution H&E (BigTIFF), 10-14 GB"
+      },
+      {
+        "role": "binned_outputs",
+        "url": "{base}/{sample}/{sample}_binned_outputs.tar.gz",
+        "dest": "{sample}/binned_outputs",
+        "unpack": "tar",
+        "strip": "binned_outputs",
+        "what": "square_002um / 008um / 016um; the pipeline reads the 2 um bins"
+      },
+      {
+        "role": "spatial",
+        "url": "{base}/{sample}/{sample}_spatial.tar.gz",
+        "dest": "{sample}/spatial",
+        "unpack": "tar",
+        "strip": "spatial",
+        "optional": true,
+        "what": "spaceranger spatial outputs (CytAssist image, fiducials). Optional: each bin size carries its own copy, which is what the pipeline falls back to -- P5's local copy has no top-level spatial/ and its run succeeded anyway."
+      },
+      {
+        "role": "feature_slice",
+        "url": "{base}/{sample}/{sample}_feature_slice.h5",
+        "dest": "{sample}/{sample}_feature_slice.h5",
+        "optional": true,
+        "what": "feature slice; not read by this pipeline, listed because the page offers it"
+      }
+    ]
+  },
+  "xenium": {
+    "source_page": {
+      "lung": "https://www.10xgenomics.com/datasets/preview-data-ffpe-human-lung-cancer-with-xenium-multimodal-cell-segmentation-1-standard",
+      "breast": "https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast"
+    },
+    "base": {
+      "lung": "https://cf.10xgenomics.com/samples/xenium/2.0.0",
+      "breast": "https://cf.10xgenomics.com/samples/xenium/1.0.1"
+    },
+    "note": "The two slides are different Xenium releases and sit under different CDN directories, hence the per-slide `base`. The breast cell-type spreadsheet lives on a different host again and carries its own absolute URL. All verified by HEAD request; the breast H&E and the spreadsheet both matched a local copy byte for byte.",
+    "bytes": {
+      "outputs": {
+        "lung": 7987586561,
+        "breast": 9861155708
+      },
+      "he_image": {
+        "lung": 1190771046,
+        "breast": 1427110955
+      },
+      "he_alignment": {
+        "lung": 126
+      },
+      "annotation_xlsx": {
+        "breast": 9409803
+      }
+    },
+    "per_slide": [
+      {
+        "role": "outputs",
+        "url": "{base}/{slide}/{slide}_outs.zip",
+        "dest": "{slide}/data",
+        "unpack": "zip",
+        "strip": null,
+        "what": "Xenium output bundle: cells.parquet, nucleus_boundaries.parquet, cell_feature_matrix, experiment.xenium. NOTE the per-slide `strip`: the lung zip has its files at the top level, the breast zip wraps them in outs/ -- see per_slide_extra.breast."
+      },
+      {
+        "role": "he_image",
+        "url": "{base}/{slide}/{slide}_he_image.ome.tif",
+        "dest": "{slide}/ome_tif/{slide}_he_image.ome.tif",
+        "what": "post-Xenium H&E image (.ome.tif)"
+      },
+      {
+        "role": "he_alignment",
+        "url": "{base}/{slide}/{slide}_he_imagealignment.csv",
+        "dest": "{slide}/{slide}_he_imagealignment.csv",
+        "what": "affine aligning the H&E to the Xenium frame. Lung only: breast's published affine is a DIFFERENT alignment, so that slide uses the committed copy in annotations/xenium/ and this entry is skipped for it. See config.XeniumSlide.he_alignment."
+      }
+    ],
+    "per_slide_extra": {
+      "breast": [
+        {
+          "role": "annotation_xlsx",
+          "url": "https://cdn.10xgenomics.com/raw/upload/v1695234604/Xenium%20Preview%20Data/Cell_Barcode_Type_Matrices.xlsx",
+          "dest": "{slide}/Cell_Barcode_Type_Matrices.xlsx",
+          "what": "the published cell-type calls for the breast slide. Served from 10x's media CDN rather than the sample's directory, which is why it is not under `base`; verified 200 / 9,409,803 bytes, sha256 equal to the delivered copy"
+        },
+        {
+          "role": "outputs",
+          "url": "{base}/{slide}/{slide}_outs.zip",
+          "dest": "{slide}/data",
+          "unpack": "zip",
+          "strip": "outs",
+          "what": "(overrides per_slide.outputs: this archive wraps everything in outs/)"
+        }
+      ]
+    }
+  }
+}

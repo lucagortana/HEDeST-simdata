@@ -1,0 +1,1323 @@
+{
+ "family": "sthelar",
+ "root": "STHELAR/bench_data",
+ "datasets": {
+  "breast_s6": {
+   "n_levels": 5,
+   "files": {
+    "cellvit.json": {
+     "bytes": 161588311,
+     "policy": "json"
+    },
+    "he.tiff": {
+     "bytes": 1978020970,
+     "policy": "tiff"
+    },
+    "hoptimus_tile_embed_bench_breast_s6.pt": {
+     "bytes": 1770821526,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 186643154,
+     "policy": "json"
+    },
+    "image_dict.pt": {
+     "bytes": 3449319342,
+     "policy": "tensor"
+    },
+    "plots/00_hovernet_seg.png": {
+     "bytes": 3225288,
+     "sha256": "e280c4fa533b34a0fe69e682274203e13b26879f6381bdd71384e5a397b95011",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_dapi.png": {
+     "bytes": 8141605,
+     "sha256": "54ae94f2ab80dcfb96045b3d0774b2cb9613bdb54db269eb3b6de7bacdc9eed3",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_hovernet.png": {
+     "bytes": 8145230,
+     "sha256": "a4d992193d2c0044e6f961054c015aa2f328154cb49df3f5c703e66c8346635c",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level0.png": {
+     "bytes": 3194926,
+     "sha256": "3e8959fc573bc25137c8b443c49b8872a0116f4526a26de2fd66d211b649d534",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level1.png": {
+     "bytes": 3190871,
+     "sha256": "e6d7f9774604e9bf45505e9f69e3ea863b816cd116303f23e58b30da6c9825db",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level2.png": {
+     "bytes": 3197407,
+     "sha256": "cd6a0cee1060bdbf22895daeaa5285dba9847fa39fefdb62d5ddf7cdf3b12f28",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level3.png": {
+     "bytes": 3189806,
+     "sha256": "2194a5aac171b5799e5721e7acce5c0b97f4775ec9135b0cb4ae29abdc0b5f03",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level4.png": {
+     "bytes": 3200461,
+     "sha256": "db0a4698a8ef71e91edd10de8520f016b1296fce63bf6d9db312aaddbe99e08f",
+     "policy": "figure"
+    },
+    "plots/02_prop_level0.png": {
+     "bytes": 2185030,
+     "sha256": "33971c80b3f61f5237abcf3bf2c73fa293a7a95ea2bf6dacba0aeeeb943e9d78",
+     "policy": "figure"
+    },
+    "plots/02_prop_level1.png": {
+     "bytes": 2216196,
+     "sha256": "8df5358492b943ff022fa77b84e7fa0ced9f2f440ceb0eaaf64f2b047f1f811f",
+     "policy": "figure"
+    },
+    "plots/02_prop_level2.png": {
+     "bytes": 2236190,
+     "sha256": "c551339c9487d548d4afc627b58a9f3cb5fcc3cffbb66843b7d81cb06d6c705c",
+     "policy": "figure"
+    },
+    "plots/02_prop_level3.png": {
+     "bytes": 2228543,
+     "sha256": "3f3e297b48fb6f6dceacc0f6a433a72ceee46c30aeab0734781cea1a792732fd",
+     "policy": "figure"
+    },
+    "plots/02_prop_level4.png": {
+     "bytes": 2245658,
+     "sha256": "472b4d1b5fdcf92b31b172749477fa278001b36c945302f87e994df5f3490d7c",
+     "policy": "figure"
+    },
+    "plots/03_levels_tree.png": {
+     "bytes": 104384,
+     "sha256": "0407a58ac5241d071ebba27396b6b277acd5b8de8d8e389fb3aa69dd39f6f6e2",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 75546312,
+     "policy": "h5ad"
+    },
+    "sim/level0/dapi_seg.json": {
+     "bytes": 134182092,
+     "policy": "json"
+    },
+    "sim/level0/proportions.csv": {
+     "bytes": 203595,
+     "sha256": "b90452203d45afdcd07452e51dbef99fbc4023d4e939516539a745b63603a66a",
+     "policy": "csv"
+    },
+    "sim/level1/dapi_seg.json": {
+     "bytes": 134392821,
+     "policy": "json"
+    },
+    "sim/level1/proportions.csv": {
+     "bytes": 280460,
+     "sha256": "03f792af97352ca4dbaadfbcfa8acc42ddf2b8136aadf8d740b42a1252be6115",
+     "policy": "csv"
+    },
+    "sim/level2/dapi_seg.json": {
+     "bytes": 134438649,
+     "policy": "json"
+    },
+    "sim/level2/proportions.csv": {
+     "bytes": 319574,
+     "sha256": "32252d552ffb92603d9a867e034dd66d1e2a4731e66cc9c73872f89e217e5d32",
+     "policy": "csv"
+    },
+    "sim/level3/dapi_seg.json": {
+     "bytes": 134079083,
+     "policy": "json"
+    },
+    "sim/level3/proportions.csv": {
+     "bytes": 339700,
+     "sha256": "7ad4a16d4908929565556b9fbbc794775bf94079beab94d10318d79a4f5298dc",
+     "policy": "csv"
+    },
+    "sim/level4/dapi_seg.json": {
+     "bytes": 134917970,
+     "policy": "json"
+    },
+    "sim/level4/proportions.csv": {
+     "bytes": 366393,
+     "sha256": "36fb8f560d00a6a86120218d211b1a924df59ad2c4237cea3ec501e47c61d1fa",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1392,
+     "sha256": "46713aa7053084fca3ebbe4040b7c8da06dfc3970c08bc170945c113ccb294a8",
+     "policy": "json"
+    },
+    "spot_dict.json": {
+     "bytes": 787853,
+     "sha256": "897b99c4b3ac0bd67b311a39461b898a490843d73cd99b439a602d413bd82f86",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "_moco_model/bench_breast_s6/checkpoints/checkpoint_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_breast_s6/events.out.tfevents.1784932998.node003.2150376.0": "MoCo training checkpoints",
+    "_moco_model/bench_breast_s6/moco_model_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_breast_s6/moco_model_best_mean_std.json": "MoCo training checkpoints",
+    "_moco_model/config/bench_breast_s6.json": "MoCo training checkpoints",
+    "_staging/cell_images/slide_bench_breast_s6.h5": "HoVerNet staging; lives in _work/ now",
+    "hoptimus_embed_bench_breast_s6.pt": "cell-crop H-Optimus-0 variant; the tile variant is the one the gridsearch reads",
+    "moco_embed_bench_breast_s6.pt": "MoCo-v3 embeddings: not reproducible (no fixed seed) and superseded by H-Optimus-0"
+   },
+   "undeclared": []
+  },
+  "cervix_s0_0": {
+   "n_levels": 5,
+   "files": {
+    "cellvit.json": {
+     "bytes": 230163341,
+     "policy": "json"
+    },
+    "he.tiff": {
+     "bytes": 2138675404,
+     "policy": "tiff"
+    },
+    "hoptimus_tile_embed_bench_cervix_s0_0.pt": {
+     "bytes": 2342918950,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 254366151,
+     "policy": "json"
+    },
+    "image_dict.pt": {
+     "bytes": 4562407542,
+     "policy": "tensor"
+    },
+    "plots/00_hovernet_seg.png": {
+     "bytes": 3049233,
+     "sha256": "f6af2b51f83a95cedbd0a955f98ec70c65377193838ba0ab6b5fc7068fa37747",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_dapi.png": {
+     "bytes": 7702904,
+     "sha256": "be5ed4132a2bbd920b0df536856160e53078863380a7668cbaf4919ed35d6245",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_hovernet.png": {
+     "bytes": 7734783,
+     "sha256": "98c467de2f43ec3fd8431ca3d26550b75b9f686e63ebf6bdefd2b0ac9786d852",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level0.png": {
+     "bytes": 3056380,
+     "sha256": "82f7bd951bd259ba322f86627885ea110fdc7fcda2bffc093840250014d05c2a",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level1.png": {
+     "bytes": 3031225,
+     "sha256": "f326c41c5239e9f60d56c1ce6700950752b0797ac8f6741c69fae9903145bb56",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level2.png": {
+     "bytes": 3008212,
+     "sha256": "d9eac0d2b56160d0907e4a0cd222c1e28b62202038329a7fdd06d9889dc7b2aa",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level3.png": {
+     "bytes": 2961672,
+     "sha256": "a6b93f23df5527a976b81a8cee50c3307149ad0d827b30fd2a5cd0434c767bc3",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level4.png": {
+     "bytes": 2976401,
+     "sha256": "ec0c2ee1165254dd2cf6e444ecb577bf8dcf2afb7d8230fe9e4f2efb7ad05cdb",
+     "policy": "figure"
+    },
+    "plots/02_prop_level0.png": {
+     "bytes": 2017504,
+     "sha256": "2d27df66eaa7561be1500facf81de99567e6aa414100ad5843cdf604224f7e5e",
+     "policy": "figure"
+    },
+    "plots/02_prop_level1.png": {
+     "bytes": 2042498,
+     "sha256": "6776081fccc7828f6d1da2ad1a3f8e26e0013da2ea4611be8317c3292fce3e6e",
+     "policy": "figure"
+    },
+    "plots/02_prop_level2.png": {
+     "bytes": 2064525,
+     "sha256": "bc20cfd92d47aa05e0640b6794551de0715b41023ffc40d34ada7feecc22fa19",
+     "policy": "figure"
+    },
+    "plots/02_prop_level3.png": {
+     "bytes": 2070607,
+     "sha256": "576f3c9ff1bfa1858410846f140b0ae2d5d28b841cdbc20f799594324b23566f",
+     "policy": "figure"
+    },
+    "plots/02_prop_level4.png": {
+     "bytes": 2083150,
+     "sha256": "ee313216f887aa4b0b190ce3cf7ee0a0711003cbe523ffddb148bcba9b1c7270",
+     "policy": "figure"
+    },
+    "plots/03_levels_tree.png": {
+     "bytes": 86943,
+     "sha256": "879559e4f538174d22912accc0b60d11c7459c479cfc6f31c4203b9514541de4",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 77278728,
+     "policy": "h5ad"
+    },
+    "sim/level0/dapi_seg.json": {
+     "bytes": 196850836,
+     "policy": "json"
+    },
+    "sim/level0/proportions.csv": {
+     "bytes": 207321,
+     "sha256": "b10790a0cdf4de964140a6166a22712b877498c855df2a9bd95e72a6225da51b",
+     "policy": "csv"
+    },
+    "sim/level1/dapi_seg.json": {
+     "bytes": 196648574,
+     "policy": "json"
+    },
+    "sim/level1/proportions.csv": {
+     "bytes": 272080,
+     "sha256": "2301cf53600ae2a039b33f2c6849a52ade4de57e57d5b03ca5429814f2112165",
+     "policy": "csv"
+    },
+    "sim/level2/dapi_seg.json": {
+     "bytes": 198607750,
+     "policy": "json"
+    },
+    "sim/level2/proportions.csv": {
+     "bytes": 307521,
+     "sha256": "3a0b1fcf9dd3090ff13ce2b0bf96200f3d5fe68e1d896f7b98b64eaef0946c5c",
+     "policy": "csv"
+    },
+    "sim/level3/dapi_seg.json": {
+     "bytes": 196999509,
+     "policy": "json"
+    },
+    "sim/level3/proportions.csv": {
+     "bytes": 343873,
+     "sha256": "3107809a798ad6629345e50976331d078c4c9225f17ae7ed298388d7a6c0bc1d",
+     "policy": "csv"
+    },
+    "sim/level4/dapi_seg.json": {
+     "bytes": 198436727,
+     "policy": "json"
+    },
+    "sim/level4/proportions.csv": {
+     "bytes": 364731,
+     "sha256": "d8e01b4bc1b2127b2d1903d4d1bf7d6ced0bdd306b22fd8785b36aad0f15184a",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1354,
+     "sha256": "92c5a427bde7740877e2538e40c87d1cb77b9bfe45d8fe58d8cad0fed2576e5a",
+     "policy": "json"
+    },
+    "spot_dict.json": {
+     "bytes": 1042723,
+     "sha256": "bb4a2178f902d4cc896a66d0af882c0e2b3f41e6d9076615db036d787939280a",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "_moco_model/bench_cervix_s0_0/checkpoints/checkpoint_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_cervix_s0_0/events.out.tfevents.1784933021.node003.2150577.0": "MoCo training checkpoints",
+    "_moco_model/bench_cervix_s0_0/moco_model_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_cervix_s0_0/moco_model_best_mean_std.json": "MoCo training checkpoints",
+    "_moco_model/config/bench_cervix_s0_0.json": "MoCo training checkpoints",
+    "_staging/cell_images/slide_bench_cervix_s0_0.h5": "HoVerNet staging; lives in _work/ now",
+    "hoptimus_embed_bench_cervix_s0_0.pt": "cell-crop H-Optimus-0 variant; the tile variant is the one the gridsearch reads",
+    "moco_embed_bench_cervix_s0_0.pt": "MoCo-v3 embeddings: not reproducible (no fixed seed) and superseded by H-Optimus-0"
+   },
+   "undeclared": []
+  },
+  "cervix_s0_1": {
+   "n_levels": 4,
+   "files": {
+    "cellvit.json": {
+     "bytes": 148194446,
+     "policy": "json"
+    },
+    "he.tiff": {
+     "bytes": 1505651910,
+     "policy": "tiff"
+    },
+    "hoptimus_tile_embed_bench_cervix_s0_1.pt": {
+     "bytes": 1626747216,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 168231070,
+     "policy": "json"
+    },
+    "image_dict.pt": {
+     "bytes": 3167727114,
+     "policy": "tensor"
+    },
+    "plots/00_hovernet_seg.png": {
+     "bytes": 3094545,
+     "sha256": "293d5617c264a0453be9a01dc1ce996f4d4c81d7a19bf479ad5642b81ad6f442",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_dapi.png": {
+     "bytes": 7215180,
+     "sha256": "b08d9eed362404aa152f0ea1be8f8669287cd55a9eefb28d9cc6ada43665315a",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_hovernet.png": {
+     "bytes": 7378618,
+     "sha256": "1b68ef7143a566eaf6a529c0a93c47bca03c7de3add7ef84887b9af194b38365",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level0.png": {
+     "bytes": 3078923,
+     "sha256": "dfb16b4f7a269535232cd49a4673cde1931c6be5fc79e56e04bb61c73111a20c",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level1.png": {
+     "bytes": 3073896,
+     "sha256": "03b3994f615031a64c1471987f60e0eb78e10aae24c8a0eacac64444de707fcb",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level2.png": {
+     "bytes": 3063163,
+     "sha256": "b67a673d0109c2d42d9df6ba53ae27c0e77859ab99ea801361d0871d575e66d5",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level3.png": {
+     "bytes": 3042947,
+     "sha256": "4612fcc91b1dc45d0d36a816381434952b97843a97918b39d0af8fcdd9e5ff5e",
+     "policy": "figure"
+    },
+    "plots/02_prop_level0.png": {
+     "bytes": 2038677,
+     "sha256": "c0eef5ca6724608500f649fdbaed7106f492587c953336d6d7e8398fcf76a791",
+     "policy": "figure"
+    },
+    "plots/02_prop_level1.png": {
+     "bytes": 2055985,
+     "sha256": "c620cd247c1c8ef1b6c0a921cc56308410cd14587a0441114b673ab9c74333fb",
+     "policy": "figure"
+    },
+    "plots/02_prop_level2.png": {
+     "bytes": 2079149,
+     "sha256": "0e1f0f62e1f7aee979f46a03d741306dfdb7b9388926f2cf24bbe8accdd26c9b",
+     "policy": "figure"
+    },
+    "plots/02_prop_level3.png": {
+     "bytes": 2079643,
+     "sha256": "f036d784e4352f46c4040485fa862dd6d659085dc6e253f0d25fea0192dbb3b7",
+     "policy": "figure"
+    },
+    "plots/03_levels_tree.png": {
+     "bytes": 66063,
+     "sha256": "f467cd0ff014cd11b5c11fe9b11c05628133dfa7c0450493687e88b34ad61c95",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 48294288,
+     "sha256": "eadf4f1fc2b14a5546d8bbfb8b3ee8867c434a5306f78efb830809378bb5036d",
+     "policy": "h5ad"
+    },
+    "sim/level0/dapi_seg.json": {
+     "bytes": 124689021,
+     "policy": "json"
+    },
+    "sim/level0/proportions.csv": {
+     "bytes": 157164,
+     "sha256": "20dd4f1af4f74dbf58617deb13c22fee629de20790c6f461e7d514133ea14d43",
+     "policy": "csv"
+    },
+    "sim/level1/dapi_seg.json": {
+     "bytes": 124571601,
+     "policy": "json"
+    },
+    "sim/level1/proportions.csv": {
+     "bytes": 192353,
+     "sha256": "75360207bd1e14257c069fba42855e2e935d6775f252fe2cc59dfc1ed2bfc6ce",
+     "policy": "csv"
+    },
+    "sim/level2/dapi_seg.json": {
+     "bytes": 125563805,
+     "policy": "json"
+    },
+    "sim/level2/proportions.csv": {
+     "bytes": 221273,
+     "sha256": "b9f4a424b2d29db331ebc4621aeeefc0abbf399c76f4436b95614750a1836b90",
+     "policy": "csv"
+    },
+    "sim/level3/dapi_seg.json": {
+     "bytes": 124879366,
+     "policy": "json"
+    },
+    "sim/level3/proportions.csv": {
+     "bytes": 243911,
+     "sha256": "c64df8ece8974312c5b62ce6ff420227f509f2d05bba1b6a25f82218566797ff",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1041,
+     "sha256": "50286f0335fd333af33b3a787b54ba22832183a8b942d84df2ceee6abb0bd299",
+     "policy": "json"
+    },
+    "spot_dict.json": {
+     "bytes": 707226,
+     "sha256": "8d2cbb0f58126266cb1f5f028a87f31d65d435a1f50a0634fede80d99a1e70f7",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "_moco_model/bench_cervix_s0_1/checkpoints/checkpoint_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_cervix_s0_1/events.out.tfevents.1784932916.node003.2149358.0": "MoCo training checkpoints",
+    "_moco_model/bench_cervix_s0_1/moco_model_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_cervix_s0_1/moco_model_best_mean_std.json": "MoCo training checkpoints",
+    "_moco_model/config/bench_cervix_s0_1.json": "MoCo training checkpoints",
+    "_staging/cell_images/slide_bench_cervix_s0_1.h5": "HoVerNet staging; lives in _work/ now",
+    "hoptimus_embed_bench_cervix_s0_1.pt": "cell-crop H-Optimus-0 variant; the tile variant is the one the gridsearch reads",
+    "moco_embed_bench_cervix_s0_1.pt": "MoCo-v3 embeddings: not reproducible (no fixed seed) and superseded by H-Optimus-0"
+   },
+   "undeclared": []
+  },
+  "lung_s3": {
+   "n_levels": 5,
+   "files": {
+    "cellvit.json": {
+     "bytes": 108705636,
+     "policy": "json"
+    },
+    "he.tiff": {
+     "bytes": 1676720886,
+     "policy": "tiff"
+    },
+    "hoptimus_tile_embed_bench_lung_s3.pt": {
+     "bytes": 1105700128,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 121681308,
+     "policy": "json"
+    },
+    "image_dict.pt": {
+     "bytes": 2154538818,
+     "policy": "tensor"
+    },
+    "plots/00_hovernet_seg.png": {
+     "bytes": 2810083,
+     "sha256": "8c1d78978ddc95e0cb6a8642de394ba4854b70602797577f4dfd9924beed6b27",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_dapi.png": {
+     "bytes": 11389920,
+     "sha256": "9bda388e9ddc0060c96d29165b89d9db659bac97bd5eb9a8c49672493c257718",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_hovernet.png": {
+     "bytes": 11438788,
+     "sha256": "1dcbfa2104f0baaba448e6eb25a3059b8d60806767b96fd19a9e5f5fd007ab7a",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level0.png": {
+     "bytes": 2802723,
+     "sha256": "458b93a574dfa4614de058876228c0f63d2faad607b67350d02aeb5a5c3ebf41",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level1.png": {
+     "bytes": 2800106,
+     "sha256": "239815858750d3dde00404497c2bb4ab9031778674dc93fd555fb93f5b78a202",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level2.png": {
+     "bytes": 2805819,
+     "sha256": "55655117cce428124c0d097b1cdc38ef436f176b0d233b2978e6dd3c46221b6e",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level3.png": {
+     "bytes": 2806402,
+     "sha256": "26e227ee88397a3f884dab856b67c1b518e84e115ce5d10c885fa8f27907a7c3",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level4.png": {
+     "bytes": 2829724,
+     "sha256": "e30edbe6072ceaed5c05b54ab44059dba1b09d91847940d628f2497a8145d5d5",
+     "policy": "figure"
+    },
+    "plots/02_prop_level0.png": {
+     "bytes": 1885250,
+     "sha256": "f4602106af42a504b1a3190be36c35b262cec6f2e143ae1c172fc8a1030c4158",
+     "policy": "figure"
+    },
+    "plots/02_prop_level1.png": {
+     "bytes": 1908136,
+     "sha256": "bad1c4bde660984935bb86af42b069cb5d0291c4280024905d1eb3558f5803b4",
+     "policy": "figure"
+    },
+    "plots/02_prop_level2.png": {
+     "bytes": 1925454,
+     "sha256": "50a837df2d908826322a722b882053a52883f1d423828aa26328d9096aa62b88",
+     "policy": "figure"
+    },
+    "plots/02_prop_level3.png": {
+     "bytes": 1929299,
+     "sha256": "94db591dd725ad0739f7657c91f0ba21e1d801d27f6bca7c4798b3723f4434cc",
+     "policy": "figure"
+    },
+    "plots/02_prop_level4.png": {
+     "bytes": 1952610,
+     "sha256": "6d84b40d6f8138e5ed9ec8597f56730b1c339ba5c3ec055e31cb48fd73635e5e",
+     "policy": "figure"
+    },
+    "plots/03_levels_tree.png": {
+     "bytes": 162542,
+     "sha256": "8ca543f7f307bb0f621b71fc47e5789aace551c63549146d926ad88261b07646",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 105619224,
+     "policy": "h5ad"
+    },
+    "sim/level0/dapi_seg.json": {
+     "bytes": 101178962,
+     "policy": "json"
+    },
+    "sim/level0/proportions.csv": {
+     "bytes": 164424,
+     "sha256": "5363490a7eb9ab0cc1c544ed6b45c1ff4802361f5c971a5c43924928d4dbf8a3",
+     "policy": "csv"
+    },
+    "sim/level1/dapi_seg.json": {
+     "bytes": 101323253,
+     "policy": "json"
+    },
+    "sim/level1/proportions.csv": {
+     "bytes": 225828,
+     "sha256": "6c40c84a7a3ba4d21ae58bf7e50ccc1150a6c7a59119a19ada953aef6a80364f",
+     "policy": "csv"
+    },
+    "sim/level2/dapi_seg.json": {
+     "bytes": 101449617,
+     "policy": "json"
+    },
+    "sim/level2/proportions.csv": {
+     "bytes": 250680,
+     "sha256": "1b76c9111fcf4ee44150fc0a2354e1afe759028989d0b72647f303da2f8b547f",
+     "policy": "csv"
+    },
+    "sim/level3/dapi_seg.json": {
+     "bytes": 101033909,
+     "policy": "json"
+    },
+    "sim/level3/proportions.csv": {
+     "bytes": 305245,
+     "sha256": "1fa6756d5f3c1c5998ef1cf25a28f4843fc49f71fb3ef17bcceaf5a416ee916c",
+     "policy": "csv"
+    },
+    "sim/level4/dapi_seg.json": {
+     "bytes": 101879268,
+     "policy": "json"
+    },
+    "sim/level4/proportions.csv": {
+     "bytes": 351159,
+     "sha256": "ed60ad208286f24359e67d2b1bc3f23fd3226b3a8ed529fe87771c21b8a787dd",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1575,
+     "sha256": "f584152cf7236cbbc946302b05cabde7978b70260552b7a51104557a98e4958c",
+     "policy": "json"
+    },
+    "spot_dict.json": {
+     "bytes": 499054,
+     "sha256": "a22f73a52d44c34bbc1ae2081ea465cf2856997110f62d248fdb12982ef0427d",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "_moco_model/bench_lung_s3/checkpoints/checkpoint_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_lung_s3/events.out.tfevents.1784932898.node003.2148970.0": "MoCo training checkpoints",
+    "_moco_model/bench_lung_s3/moco_model_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_lung_s3/moco_model_best_mean_std.json": "MoCo training checkpoints",
+    "_moco_model/config/bench_lung_s3.json": "MoCo training checkpoints",
+    "_staging/cell_images/slide_bench_lung_s3.h5": "HoVerNet staging; lives in _work/ now",
+    "hoptimus_embed_bench_lung_s3.pt": "cell-crop H-Optimus-0 variant; the tile variant is the one the gridsearch reads",
+    "moco_embed_bench_lung_s3.pt": "MoCo-v3 embeddings: not reproducible (no fixed seed) and superseded by H-Optimus-0"
+   },
+   "undeclared": []
+  },
+  "lymph_node_s0": {
+   "n_levels": 5,
+   "files": {
+    "cellvit.json": {
+     "bytes": 340144036,
+     "policy": "json"
+    },
+    "he.tiff": {
+     "bytes": 1401883182,
+     "policy": "tiff"
+    },
+    "hoptimus_tile_embed_bench_lymph_node_s0.pt": {
+     "bytes": 4086194870,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 374937899,
+     "policy": "json"
+    },
+    "image_dict.pt": {
+     "bytes": 7957509562,
+     "policy": "tensor"
+    },
+    "plots/00_hovernet_seg.png": {
+     "bytes": 3409326,
+     "sha256": "197212f971d934526d75600491bc5101e35844f931607fde1fa4e4ea21cbd2bf",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_dapi.png": {
+     "bytes": 14151230,
+     "sha256": "ed9ac7e8c5ab4b8b508c9380b9fc13f31a006b51a9a23e712afa7980eb29ca8f",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_hovernet.png": {
+     "bytes": 13221578,
+     "sha256": "f9a7670ba0d05f39002b734ed3658a386de0615852fe96de2fc88774a982b062",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level0.png": {
+     "bytes": 3316859,
+     "sha256": "20a86346b8a3f879d427f24cf8ce2dc4afeab195324db7e53c73838d71611e40",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level1.png": {
+     "bytes": 3299674,
+     "sha256": "466d36b050f2a458b83b583b7ad21a95c410ca8e7b42a5f6d0fdabd864ada311",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level2.png": {
+     "bytes": 3289900,
+     "sha256": "8a8cfe9144e259ee3978073fe5619832f1bc29f2e8458796c6826ed528a1ec4d",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level3.png": {
+     "bytes": 3273849,
+     "sha256": "6827de0cd0cbbde6a3288bf036a2a1bfdcd5f7cb12bb5ee83ae4dce9fa5354b3",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level4.png": {
+     "bytes": 3287719,
+     "sha256": "e4c1d930358423632ff32b1057cc0379e033596530eaa29dcd58a6198157162d",
+     "policy": "figure"
+    },
+    "plots/02_prop_level0.png": {
+     "bytes": 2182125,
+     "sha256": "d21016b7947d5e6321d549f304fbf7d408dbe6c749a6595a6e80abf8ed006586",
+     "policy": "figure"
+    },
+    "plots/02_prop_level1.png": {
+     "bytes": 2230511,
+     "sha256": "751c26218bbe75a1b70bb6eebab82c44fcebac7c64eab7bb1ce247d177e7435c",
+     "policy": "figure"
+    },
+    "plots/02_prop_level2.png": {
+     "bytes": 2260585,
+     "sha256": "b8dfccc26ce00c9d4f83dd2f6a9922ce040ea3cc7418dab704851e078ecaaf1f",
+     "policy": "figure"
+    },
+    "plots/02_prop_level3.png": {
+     "bytes": 2249754,
+     "sha256": "7423a0d364d8d19951948aa77d04a8b1c8934c37b73d4365b11c02d12f89a406",
+     "policy": "figure"
+    },
+    "plots/02_prop_level4.png": {
+     "bytes": 2269923,
+     "sha256": "9c4cfeb2048ea95fcf9662a6eb7619b6c1c44fbfbfffe40d389961bcd5cf0099",
+     "policy": "figure"
+    },
+    "plots/03_levels_tree.png": {
+     "bytes": 104665,
+     "sha256": "1170bc18d06ca6df919ea176ff1eb77afb0c6145cf7653511a97c6b7beb42a9b",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 128996312,
+     "policy": "h5ad"
+    },
+    "sim/level0/dapi_seg.json": {
+     "bytes": 323106850,
+     "policy": "json"
+    },
+    "sim/level0/proportions.csv": {
+     "bytes": 142232,
+     "sha256": "dbefe95435d24213095df29f8912ecde29906d0c5d5948977a3f552e70e78610",
+     "policy": "csv"
+    },
+    "sim/level1/dapi_seg.json": {
+     "bytes": 323806049,
+     "policy": "json"
+    },
+    "sim/level1/proportions.csv": {
+     "bytes": 233343,
+     "sha256": "dbc09146bbc98c7e2870f2da77ec2303d744de87006758effd6e8d6cad325afd",
+     "policy": "csv"
+    },
+    "sim/level2/dapi_seg.json": {
+     "bytes": 323954384,
+     "policy": "json"
+    },
+    "sim/level2/proportions.csv": {
+     "bytes": 282518,
+     "sha256": "b139be3a149dd11b559ce0a278e7628a25b463aff5cbd36840b9ccc4b1830606",
+     "policy": "csv"
+    },
+    "sim/level3/dapi_seg.json": {
+     "bytes": 322288709,
+     "policy": "json"
+    },
+    "sim/level3/proportions.csv": {
+     "bytes": 310618,
+     "sha256": "83bcde0e9ef244cb3b351ec56f1ebc903376e2ff0bdb6058b70e1a7bbda71363",
+     "policy": "csv"
+    },
+    "sim/level4/dapi_seg.json": {
+     "bytes": 323254603,
+     "policy": "json"
+    },
+    "sim/level4/proportions.csv": {
+     "bytes": 358071,
+     "sha256": "6e27bc0f9bd96086d96eb961d72cbef256e917985d993d1a9881db1eff9e912c",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1280,
+     "sha256": "f32f38b6652c283d7d359adfe8e6c91102632c2be4005ce023680cf07a4da0c3",
+     "policy": "json"
+    },
+    "spot_dict.json": {
+     "bytes": 1711689,
+     "sha256": "3ac49e393625c2e4be8f23db001439e2b1c8f95d09c6b4316a556b2ea0c3c5fe",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "_moco_model/bench_lymph_node_s0/checkpoints/checkpoint_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_lymph_node_s0/events.out.tfevents.1784960076.node003.2266064.0": "MoCo training checkpoints",
+    "_moco_model/bench_lymph_node_s0/moco_model_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_lymph_node_s0/moco_model_best_mean_std.json": "MoCo training checkpoints",
+    "_moco_model/config/bench_lymph_node_s0.json": "MoCo training checkpoints",
+    "_staging/cell_images/slide_bench_lymph_node_s0.h5": "HoVerNet staging; lives in _work/ now",
+    "hoptimus_embed_bench_lymph_node_s0.pt": "cell-crop H-Optimus-0 variant; the tile variant is the one the gridsearch reads",
+    "moco_embed_bench_lymph_node_s0.pt": "MoCo-v3 embeddings: not reproducible (no fixed seed) and superseded by H-Optimus-0"
+   },
+   "undeclared": []
+  },
+  "ovary_s1": {
+   "n_levels": 5,
+   "files": {
+    "cellvit.json": {
+     "bytes": 223754465,
+     "policy": "json"
+    },
+    "he.tiff": {
+     "bytes": 2379556126,
+     "policy": "tiff"
+    },
+    "hoptimus_tile_embed_bench_ovary_s1.pt": {
+     "bytes": 2052423118,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 243895202,
+     "policy": "json"
+    },
+    "image_dict.pt": {
+     "bytes": 3998409654,
+     "policy": "tensor"
+    },
+    "plots/00_hovernet_seg.png": {
+     "bytes": 3123037,
+     "sha256": "2d8c1b5619ca376880c9bcaf152e74c8a27a0b428d071ce925e77d37352c7692",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_dapi.png": {
+     "bytes": 8232347,
+     "sha256": "33660dad207cb421eb0dd12548337bd61e0d4c8db7dac2ccd3a6fddf894752f3",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_hovernet.png": {
+     "bytes": 8002626,
+     "sha256": "36b4ec5f9c99cef54d075ffcae1230a242e98556b93b54e8007d21142a576d82",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level0.png": {
+     "bytes": 3066774,
+     "sha256": "2294e43e1a5deab2b550412ade778d7431015782dc110c80fc648ed831f08d4b",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level1.png": {
+     "bytes": 3068319,
+     "sha256": "310c4f2a33fa5c71779ef8c7c3f694784d0ae7c794ce7e8973cfe6be6a1617e8",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level2.png": {
+     "bytes": 3068264,
+     "sha256": "61a4c07d617818467863fe2b856431d7a4eb3f1b57f219ab9540890368fbae89",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level3.png": {
+     "bytes": 3059119,
+     "sha256": "1fcfbbaada2b29ac878ff4bf76fe03911557fc84e44ce056b503acbc6eab847b",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level4.png": {
+     "bytes": 3060020,
+     "sha256": "29d5e372ceb708cd018b4eb60692e8e8a23c8a2743168b3c92061f626f891049",
+     "policy": "figure"
+    },
+    "plots/02_prop_level0.png": {
+     "bytes": 2042134,
+     "sha256": "bc67794334e91c5df32b6f7f1be13a00ff31b715e21279dbf76a768e64d312a7",
+     "policy": "figure"
+    },
+    "plots/02_prop_level1.png": {
+     "bytes": 2053328,
+     "sha256": "6cb6889e1e0e5c5b35e309bb83bfdb5ba230c65f595e1a6ba17717d59f6cca22",
+     "policy": "figure"
+    },
+    "plots/02_prop_level2.png": {
+     "bytes": 2072279,
+     "sha256": "bea7a4591fd49beef77c31763dd0f2a8535ebc04f750935ce122aa8996d69f25",
+     "policy": "figure"
+    },
+    "plots/02_prop_level3.png": {
+     "bytes": 2065702,
+     "sha256": "b1d6b9850f60781bb4a29af40d55ebc509324ae8a0e6692a2c672f4bb4719234",
+     "policy": "figure"
+    },
+    "plots/02_prop_level4.png": {
+     "bytes": 2088508,
+     "sha256": "0729274a943ec024c0a603301bf06ad770c5e1fa09f39d7e94926efddb35e6c9",
+     "policy": "figure"
+    },
+    "plots/03_levels_tree.png": {
+     "bytes": 84158,
+     "sha256": "9e839203b08a1b6681ecb51e77332e3f0de3f26f7e40f92ebd2508117124679d",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 124981384,
+     "policy": "h5ad"
+    },
+    "sim/level0/dapi_seg.json": {
+     "bytes": 184315562,
+     "policy": "json"
+    },
+    "sim/level0/proportions.csv": {
+     "bytes": 235673,
+     "sha256": "006e093f340ff7b9cb76c05d2b31cce8f78680bc7571e6e8fc298eb684cc442b",
+     "policy": "csv"
+    },
+    "sim/level1/dapi_seg.json": {
+     "bytes": 184225789,
+     "policy": "json"
+    },
+    "sim/level1/proportions.csv": {
+     "bytes": 280079,
+     "sha256": "400aa5673fee1946bccd65ae38a1f6266830e03eb2472535540a619f862796d7",
+     "policy": "csv"
+    },
+    "sim/level2/dapi_seg.json": {
+     "bytes": 185279006,
+     "policy": "json"
+    },
+    "sim/level2/proportions.csv": {
+     "bytes": 310595,
+     "sha256": "aab951f399082f6ba85286474f736ea3c3383d378dea0aa16f0182430963e9b4",
+     "policy": "csv"
+    },
+    "sim/level3/dapi_seg.json": {
+     "bytes": 184024902,
+     "policy": "json"
+    },
+    "sim/level3/proportions.csv": {
+     "bytes": 339197,
+     "sha256": "d0f1b7a8629166b43f8713d9186086d08d24e3290b38d41dd023bb2304ee901c",
+     "policy": "csv"
+    },
+    "sim/level4/dapi_seg.json": {
+     "bytes": 184993541,
+     "policy": "json"
+    },
+    "sim/level4/proportions.csv": {
+     "bytes": 383810,
+     "sha256": "35649777bbf03c1b8328e9637aed1428db6bfad33e539005212913b215503c37",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1337,
+     "sha256": "eb1cf253587e5998385e8ad52d4da1d800276ea820df39912e1b42573f9a55cd",
+     "policy": "json"
+    },
+    "spot_dict.json": {
+     "bytes": 924371,
+     "sha256": "87ab40f25e6084d221be21ca11fc977a457cb04c62957555c78784aa0fa00e1e",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "_moco_model/bench_ovary_s1/checkpoints/checkpoint_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_ovary_s1/events.out.tfevents.1784972086.node003.2316914.0": "MoCo training checkpoints",
+    "_moco_model/bench_ovary_s1/moco_model_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_ovary_s1/moco_model_best_mean_std.json": "MoCo training checkpoints",
+    "_moco_model/config/bench_ovary_s1.json": "MoCo training checkpoints",
+    "_staging/cell_images/slide_bench_ovary_s1.h5": "HoVerNet staging; lives in _work/ now",
+    "hoptimus_embed_bench_ovary_s1.pt": "cell-crop H-Optimus-0 variant; the tile variant is the one the gridsearch reads",
+    "moco_embed_bench_ovary_s1.pt": "MoCo-v3 embeddings: not reproducible (no fixed seed) and superseded by H-Optimus-0"
+   },
+   "undeclared": []
+  },
+  "prostate_s0": {
+   "n_levels": 5,
+   "files": {
+    "cellvit.json": {
+     "bytes": 111232314,
+     "policy": "json"
+    },
+    "he.tiff": {
+     "bytes": 3212814210,
+     "policy": "tiff"
+    },
+    "hoptimus_tile_embed_bench_prostate_s0.pt": {
+     "bytes": 1128818186,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 122166098,
+     "policy": "json"
+    },
+    "image_dict.pt": {
+     "bytes": 2198217854,
+     "policy": "tensor"
+    },
+    "plots/00_hovernet_seg.png": {
+     "bytes": 2606280,
+     "sha256": "ec438530925e1243d808c814662ac564009b9f2f444529fd6d94806f20bf0710",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_dapi.png": {
+     "bytes": 6061857,
+     "sha256": "deb0c372267b450737edd2a6e18e39d43bae3339fc3adb07998a0f10b7269823",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_hovernet.png": {
+     "bytes": 6118590,
+     "sha256": "50c7caebaed1f78b4f420a4b08cc53233e6f87cfd74228a8266e54047ac82ba2",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level0.png": {
+     "bytes": 2596585,
+     "sha256": "827e80e3be78051e4a80ad1b7bcaa3e968f4ebfbee0b555664f9bc54ea9561cb",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level1.png": {
+     "bytes": 2592835,
+     "sha256": "fcd0932c2ca0c0648734c3ae654a0b3319a2aead660b89a2b9d089dee759cf87",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level2.png": {
+     "bytes": 2601783,
+     "sha256": "7c45b31cd6b34633d359ee7a88822a577ac1aa9f6f9430cedef2dab1864efe87",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level3.png": {
+     "bytes": 2611515,
+     "sha256": "196d207368d74deaef428ba50326e6fb14d2045eb3022d56f643412c8c378c48",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level4.png": {
+     "bytes": 2612819,
+     "sha256": "ed6ad4ceaec15dd57a4fc6188db15a283ead68d11eb646df3cc99670c2f0305b",
+     "policy": "figure"
+    },
+    "plots/02_prop_level0.png": {
+     "bytes": 1732275,
+     "sha256": "68c4ec5e3665616faa28dc800e22846288867abff525e8974d23c6e585fe765f",
+     "policy": "figure"
+    },
+    "plots/02_prop_level1.png": {
+     "bytes": 1753451,
+     "sha256": "687a7527326b22973b4f0c18932b697f7606f430c11e1bb693e0d2df3ad6b231",
+     "policy": "figure"
+    },
+    "plots/02_prop_level2.png": {
+     "bytes": 1768269,
+     "sha256": "cc16399b012f901b589136969fdfedbf5d8af97880ee200e73ddc5ce46841755",
+     "policy": "figure"
+    },
+    "plots/02_prop_level3.png": {
+     "bytes": 1776494,
+     "sha256": "5030bde1dcba6e45761d28a81a699bd274d9b946a2912591f3d50955bb2113d6",
+     "policy": "figure"
+    },
+    "plots/02_prop_level4.png": {
+     "bytes": 1788046,
+     "sha256": "df152dd2ec9cb6cc508c04e2b8b728c589083ab0adc3bcbfdeb464842ca7f48e",
+     "policy": "figure"
+    },
+    "plots/03_levels_tree.png": {
+     "bytes": 114208,
+     "sha256": "f75ca8897bdd1bcaaa50f9c15c61d212d4e960f0045dba6ea20761c77109112e",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 69392352,
+     "policy": "h5ad"
+    },
+    "sim/level0/dapi_seg.json": {
+     "bytes": 92088592,
+     "policy": "json"
+    },
+    "sim/level0/proportions.csv": {
+     "bytes": 171547,
+     "sha256": "16f351bfee348b331811ed1556a49ff65e9092b24fe3f9ba8a9e4d7a1c89b846",
+     "policy": "csv"
+    },
+    "sim/level1/dapi_seg.json": {
+     "bytes": 92103222,
+     "policy": "json"
+    },
+    "sim/level1/proportions.csv": {
+     "bytes": 206669,
+     "sha256": "de79348212bd9bb493a37357e24bcc5a16d51ea6f4a70d64eb016ce03cc4113b",
+     "policy": "csv"
+    },
+    "sim/level2/dapi_seg.json": {
+     "bytes": 92455891,
+     "policy": "json"
+    },
+    "sim/level2/proportions.csv": {
+     "bytes": 229176,
+     "sha256": "2ec2ce2eb6a6b76bd619a5c5a901305e71b1d1d0d2045391d8f85b3aef9c4d44",
+     "policy": "csv"
+    },
+    "sim/level3/dapi_seg.json": {
+     "bytes": 92143035,
+     "policy": "json"
+    },
+    "sim/level3/proportions.csv": {
+     "bytes": 270655,
+     "sha256": "17c7bd78c6107232bc02e0a89b605b34fe8faa66438de3a256c1115050b1cc28",
+     "policy": "csv"
+    },
+    "sim/level4/dapi_seg.json": {
+     "bytes": 92829945,
+     "policy": "json"
+    },
+    "sim/level4/proportions.csv": {
+     "bytes": 319247,
+     "sha256": "fa1b1223e1777054d3aadedfbaca2e64ba955c30769578588631e55bda5ddb38",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1393,
+     "sha256": "836024af2267ea867f7bbcbd0657cccacd9bba654a4b1149975e24595d274ca5",
+     "policy": "json"
+    },
+    "spot_dict.json": {
+     "bytes": 502765,
+     "sha256": "9bf963e7ee7a0107500a1c6fec45261a65533cbe3ac970820822f1e54c143fe2",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "_moco_model/bench_prostate_s0/checkpoints/checkpoint_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_prostate_s0/events.out.tfevents.1784975551.node003.2332229.0": "MoCo training checkpoints",
+    "_moco_model/bench_prostate_s0/moco_model_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_prostate_s0/moco_model_best_mean_std.json": "MoCo training checkpoints",
+    "_moco_model/config/bench_prostate_s0.json": "MoCo training checkpoints",
+    "_staging/cell_images/slide_bench_prostate_s0.h5": "HoVerNet staging; lives in _work/ now",
+    "hoptimus_embed_bench_prostate_s0.pt": "cell-crop H-Optimus-0 variant; the tile variant is the one the gridsearch reads",
+    "moco_embed_bench_prostate_s0.pt": "MoCo-v3 embeddings: not reproducible (no fixed seed) and superseded by H-Optimus-0"
+   },
+   "undeclared": []
+  },
+  "skin_s4": {
+   "n_levels": 5,
+   "files": {
+    "cellvit.json": {
+     "bytes": 60083455,
+     "sha256": "356fe694b3a209792a26a956a84f0af8329be66363f0d798aac6d92dcbf92197",
+     "policy": "json"
+    },
+    "he.tiff": {
+     "bytes": 1641949234,
+     "policy": "tiff"
+    },
+    "hoptimus_tile_embed_bench_skin_s4.pt": {
+     "bytes": 637032460,
+     "policy": "tensor"
+    },
+    "hovernet.json": {
+     "bytes": 69287311,
+     "policy": "json"
+    },
+    "image_dict.pt": {
+     "bytes": 1241434984,
+     "policy": "tensor"
+    },
+    "plots/00_hovernet_seg.png": {
+     "bytes": 2744247,
+     "sha256": "e3d93240e60c7aaee5fe96e3cf6716833db646c1f0debdbc5315a6524aae8a0e",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_dapi.png": {
+     "bytes": 6308250,
+     "sha256": "7f7f1d41144b329470ff6efc2efdc2b355ec77e1c06ed50d9242dac86a270075",
+     "policy": "figure"
+    },
+    "plots/00_slide_overview_hovernet.png": {
+     "bytes": 6322292,
+     "sha256": "5a5b8f30ec011380bfa78c1e9f83135e9c1721c5abf319d1cd6c33df1fd83fc2",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level0.png": {
+     "bytes": 2737209,
+     "sha256": "9412f6b45ed191a94aebe3326d1fd02bdc6ba317ffe77c8544ae5c05a7861648",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level1.png": {
+     "bytes": 2729202,
+     "sha256": "9d6dc3e463abf840e39cbd1941b931021b697ec261da1b5c8a8509a466ab4df0",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level2.png": {
+     "bytes": 2734606,
+     "sha256": "e1bb26def35d75c7a568a02ddd003a702453723a56dc0d420759de00fa9d1946",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level3.png": {
+     "bytes": 2731002,
+     "sha256": "d1098278e312aff16f58d2e1cbc75bc908d9fd05aafdbf132eb79ea92ec98e71",
+     "policy": "figure"
+    },
+    "plots/01_dapi_seg_level4.png": {
+     "bytes": 2737441,
+     "sha256": "ae6f4b34e8afc82974a03268f7ad529de70fad803c05bc02f5095c1c0bab5d67",
+     "policy": "figure"
+    },
+    "plots/02_prop_level0.png": {
+     "bytes": 1804225,
+     "sha256": "6648a7b96609d1fe7f0b015a533c3e685e2f7571e45189ed334208a43d793b91",
+     "policy": "figure"
+    },
+    "plots/02_prop_level1.png": {
+     "bytes": 1816585,
+     "sha256": "e12431ac196604672cbbd25be0fc5df113fcc114cebbddb52b7ea572f3bb25ab",
+     "policy": "figure"
+    },
+    "plots/02_prop_level2.png": {
+     "bytes": 1839529,
+     "sha256": "787e2fa8edf6f842f90938d224c688022a0ce8805b5c44370e510d59e6d17228",
+     "policy": "figure"
+    },
+    "plots/02_prop_level3.png": {
+     "bytes": 1839631,
+     "sha256": "d19bba7b70c89310a9110a333f01fb620cb266fbd07174bc76dd52e0ebfaf71d",
+     "policy": "figure"
+    },
+    "plots/02_prop_level4.png": {
+     "bytes": 1852830,
+     "sha256": "678fc8852720467112ef8188a5dded4d618a8be41cdfa2aef2fd7c89439f5728",
+     "policy": "figure"
+    },
+    "plots/03_levels_tree.png": {
+     "bytes": 129249,
+     "sha256": "ff434b7d139d41551e245c9e04e2755fe554c875851a5766e52fe32d2fd55dbf",
+     "policy": "figure"
+    },
+    "pseudovisium.h5ad": {
+     "bytes": 48805824,
+     "sha256": "377457c0e40f2c74f21ce6911dd213d16990d084073b4341b96f852d56c3a8d9",
+     "policy": "h5ad"
+    },
+    "sim/level0/dapi_seg.json": {
+     "bytes": 49299534,
+     "sha256": "dd6af1f3ba0a4ab24ce339fd18fd7aa83e0b542be1902c64c1c903c301e1e696",
+     "policy": "json"
+    },
+    "sim/level0/proportions.csv": {
+     "bytes": 80563,
+     "sha256": "01236daafabe52b4b0d84547334adafab8b094c9ddacf39887120817fce1fd30",
+     "policy": "csv"
+    },
+    "sim/level1/dapi_seg.json": {
+     "bytes": 49284463,
+     "sha256": "54b16ae242fe6bec50727a96043299d34de14d14bb645cb02ae7cbc1b64ea38a",
+     "policy": "json"
+    },
+    "sim/level1/proportions.csv": {
+     "bytes": 90214,
+     "sha256": "a7bf0f486c3781aa25b96db85ada878c3f4b2c9c11410f5c15f61adf1b350992",
+     "policy": "csv"
+    },
+    "sim/level2/dapi_seg.json": {
+     "bytes": 49421100,
+     "sha256": "96149448970262f053741646ba8796a9b8cfe709f938c857ec88f6d83676ad0c",
+     "policy": "json"
+    },
+    "sim/level2/proportions.csv": {
+     "bytes": 114419,
+     "sha256": "ca078a62b25be4cd1106f1a1c05dce46f81e34c598061824fa8b874a0afac1cd",
+     "policy": "csv"
+    },
+    "sim/level3/dapi_seg.json": {
+     "bytes": 49326537,
+     "sha256": "5c08bfecb204ccb22cee805d28bde037810717dbb82abf966be5587359368788",
+     "policy": "json"
+    },
+    "sim/level3/proportions.csv": {
+     "bytes": 121407,
+     "sha256": "c13bc87af24ea63c0fc6ffe87ed74e6161133a21a843c7079d2884eec88331cf",
+     "policy": "csv"
+    },
+    "sim/level4/dapi_seg.json": {
+     "bytes": 49464541,
+     "sha256": "01953452d946a309f13c0112de2040b253b309efa38350e02a05c9884799c31f",
+     "policy": "json"
+    },
+    "sim/level4/proportions.csv": {
+     "bytes": 132023,
+     "sha256": "60d6ea42f5be1488c5fe4a9a118fdccc67f9531704f4800920b930e4b8f5a9d6",
+     "policy": "csv"
+    },
+    "sim/levels.json": {
+     "bytes": 1522,
+     "sha256": "3f39e1edac65ced78b84317114c9540d824087d4d3b7e904a76951866e81abf4",
+     "policy": "json"
+    },
+    "spot_dict.json": {
+     "bytes": 249506,
+     "sha256": "2af21e34779f9e0032d6edb2e8688f66dd5698d7532fec4865d51259a8eb3fce",
+     "policy": "json"
+    }
+   },
+   "declared_but_absent": [],
+   "excluded_on_purpose": {
+    "_moco_model/bench_skin_s4/checkpoints/checkpoint_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_skin_s4/events.out.tfevents.1784989039.node003.2389535.0": "MoCo training checkpoints",
+    "_moco_model/bench_skin_s4/moco_model_best.pth.tar": "MoCo training checkpoints",
+    "_moco_model/bench_skin_s4/moco_model_best_mean_std.json": "MoCo training checkpoints",
+    "_moco_model/config/bench_skin_s4.json": "MoCo training checkpoints",
+    "_staging/cell_images/slide_bench_skin_s4.h5": "HoVerNet staging; lives in _work/ now",
+    "hoptimus_embed_bench_skin_s4.pt": "cell-crop H-Optimus-0 variant; the tile variant is the one the gridsearch reads",
+    "moco_embed_bench_skin_s4.pt": "MoCo-v3 embeddings: not reproducible (no fixed seed) and superseded by H-Optimus-0"
+   },
+   "undeclared": []
+  }
+ }
+}
