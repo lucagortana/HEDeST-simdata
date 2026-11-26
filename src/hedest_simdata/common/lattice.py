@@ -1,37 +1,6 @@
-"""Spot lattices. There are three, and they are deliberately not merged.
-
-Each family's existing data was built with its own lattice, and this repo has to reproduce
-that data, so a tidier single implementation would silently move every spot. The
-differences, measured against the three original implementations:
-
-**Honeycomb** (STHELAR, Visium HD) -- centres ``spacing`` apart along a row, row pitch
-``spacing * sqrt(3)/2``, odd-indexed rows shifted half a spacing, so all six neighbours of
-a spot are equidistant. This is real Visium v2 geometry: 55 um circles, 100 um apart.
-Both implementations shift odd row *indices*; they differ only in where the index origin
-sits, which is :func:`honeycomb`'s ``margin_rings``:
-
-    STHELAR    origin (x0, y0); the row at y0 is index 0, so it is NOT shifted
-               (hedest_bench.pseudovisium.build_grid, margin_rings=0)
-    Visium HD  origin (x0 - spacing, y0 - pitch); the row at y0 is index 1, so it IS
-               shifted (VisiumHD_analysis.utils.grid.build, margin_rings=1)
-
-So the stagger parity of the first occupied row differs between the two families, but as a
-*consequence* of the origin, not as an independent choice -- which is why it is not a
-separate argument. Checked against both: the measured row pitch is 86.6025 um in each
-(= 100 * sqrt(3)/2, versus 100.0 for a brick), the even/odd rows are displaced by exactly
-50.00 um, and the lowest ``array_row`` is 0 for STHELAR and 1 for Visium HD. Visium HD's
-extra ring also adds spots that end up empty and are dropped; it is kept for exactness,
-since it is what sets the ``array_row``/``array_col`` the datasets carry.
-
-**Brick** (Xenium) -- staggered rows, but ``y`` steps by the **full spacing**, not
-``spacing * sqrt(3)/2``. So it is not a honeycomb: with lung's 283/440 geometry the in-row
-neighbour is 440 away and the staggered neighbour 491, where a honeycomb would put both at
-440. The spot-to-pitch ratio is different too: 0.64 on lung and 0.70 on breast, against
-Visium's 55/100 = 0.55, so the capture circles cover proportionally more of the slide.
-Both come from ``make_spot_grid`` in the Xenium notebooks' ``utils/spatial_tools.py``, and
-both are reproduced as they are -- the Xenium datasets are what they are, and bending them
-onto a Visium honeycomb would change the ground truth the gridsearch was run against.
+"""Spot lattices.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass

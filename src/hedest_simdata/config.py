@@ -110,10 +110,6 @@ class XeniumSlide:
     code: str           # "HL" / "HB", used in the embedding file name
     sim_subdir: str     # "sim" or "sim/LuCA" -- historical, pinned by semi_sim.yaml
 
-    #: Spot geometry, in the frame the grid was built in. **Not** the Visium 55/100 um
-    #: honeycomb -- see :mod:`hedest_simdata.common.lattice`. These are the
-    #: ``spot_orga == "real"`` values; the other branch made the ``*_grouped`` /
-    #: ``*_small`` files, which are not rebuilt.
     diameter: float
     spacing: float
 

@@ -93,9 +93,6 @@ def filter_matches(intersections: GeoDataFrame, overlap_threshold: float = 0.95)
     return nuclei_in_cells
 
 
-# make_spot_grid lives in hedest_simdata.common.lattice.brick now, beside the two
-# honeycomb builders, so the difference between them is visible in one place and
-# tested against a verbatim copy of this one (tests/test_lattice.py).
 def match_nuclei_in_spots(gdf_spots: GeoDataFrame, gdf_nucleus: GeoDataFrame) -> GeoDataFrame:
     """
     Matches nuclei to spots based on spatial containment.

@@ -1,4 +1,4 @@
-"""Xenium: the Lung and Breast slides -> pseudo-Visium spots on a brick lattice.
+"""Xenium: the Lung and Breast slides -> pseudo-Visium spots.
 
     download -> convert -> pyr_tif -> mask -> hovernet -> spots -> hoptimus -> verify
 

@@ -14,7 +14,6 @@ them, and the places where the two slides differ are explicit instead of implied
 annotation       committed CSV, re-keyed    the dataset page's spreadsheet,
                  to this release's ids by   **positionally** (this Xenium release has
                  centroid                   no barcodes at all)
-lattice          283 / 440                  350 / 500
 catch-all        ``low_counts``             ``Unlabeled``
 ===============  =========================  =============================================
 
@@ -260,7 +259,6 @@ def match(sl: Slide, sdata, gdf_hn, types: pd.Series) -> pd.DataFrame:
 
 
 def build_spots(sl: Slide, sdata, gdf_hn, matched: pd.DataFrame):
-    """The brick lattice, the nuclei inside each spot, and the kept spots."""
     import geopandas as gpd
     from shapely.geometry import Point
     from spatialdata import get_extent
